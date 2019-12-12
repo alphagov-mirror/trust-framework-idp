@@ -21,7 +21,9 @@ class CredentialsController < ApplicationController
   rescue NoMethodError
     render json: { error: "Unknown type: #{type}" }, status: :bad_request
   rescue TypeError
-    render json: { error: "#{params['idp-name']} not in directory" }, status: :not_found
+    render json: {
+      error: "#{IDP['idp_name']} needs to be registered with the directory"
+    }, status: :not_found
   end
 
   def verify

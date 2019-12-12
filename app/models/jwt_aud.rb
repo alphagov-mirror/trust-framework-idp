@@ -28,6 +28,7 @@ module JwtAud
   end
 
   def rsa_private
+    # If idp private key is nil it raises a TypeError caught in the credentials controller
     @_rsa_private ||= OpenSSL::PKey::RSA.new(idp_private_key)
   end
 
