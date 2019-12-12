@@ -1,0 +1,16 @@
+---
+  applications:
+  - name: trust-framework-idp-1
+    buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
+    command: bundle exec rails db:migrate && bundle exec rails assets:precompile && bundle exec rails s
+    env:
+      RAILS_ENV: production
+      IDP: idp1
+      BROKER_DOMAIN: https://stub-oidc-broker-1.cloudapps.digital
+  - name: trust-framework-idp-2
+    buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
+    command: bundle exec rails db:migrate && bundle exec rails assets:precompile && bundle exec rails s
+    env:
+      RAILS_ENV: production
+      IDP: idp2
+      BROKER_DOMAIN: https://stub-oidc-broker-2.cloudapps.digital
