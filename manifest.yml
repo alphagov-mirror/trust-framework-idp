@@ -5,3 +5,4 @@
     command: bundle exec rails db:migrate && bundle exec rails assets:precompile && bundle exec rails s
     env:
       RAILS_ENV: production
+      IDP: idp1

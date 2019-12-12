@@ -1,4 +1,4 @@
-class AuthenticationController < ApplicationController
+class MfaController < ApplicationController
   def index
     if params[:transaction_id].nil?
       render json: { error: 'Missing transaction ID' }, status: :bad_request

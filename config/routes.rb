@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
+  root 'application#hello'
 
-  root 'authentication#index'
+  get '/authentication/:transaction_id', to: 'authentication#index'
+
+  get '/mfa', to: 'mfa#index'
+
+  get '/consent', to: 'consent#index'
+
+  get '/approve', to: 'loading#index'
 end
