@@ -29,7 +29,7 @@ class VerifiableCredential
 
   def attach_proof(payload)
     proof_options = create_proof
-    proof_options.merge!("challenge": create_signature(payload.to_json, proof_options.to_json))
+    proof_options.merge!("challenge": create_signature(payload, proof_options))
     payload.merge("proof": proof_options)
   end
 
