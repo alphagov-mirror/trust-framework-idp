@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'application#hello'
 
-  get '/authentication/:transaction_id', to: 'authentication#index'
+  get '/authentication', to: 'authentication#index'
 
   get '/mfa', to: 'mfa#index'
 

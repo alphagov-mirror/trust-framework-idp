@@ -1,6 +1,6 @@
 ---
   applications:
-  - name: trust-framework-idp
+  - name: trust-framework-idp-1
     buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
     command: bundle exec rails db:migrate && bundle exec rails assets:precompile && bundle exec rails s
     env:

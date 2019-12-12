@@ -1,4 +1,4 @@
-idp_name: another
+idp_name: IDP-1
 broker_domain: https://stub-oidc-broker-1.cloudapps.digital
 title: IDP 1
 authentication_title: IDP 1
