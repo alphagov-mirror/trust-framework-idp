@@ -16,6 +16,12 @@
 
     <% if params[:controller] == 'loading' %>
       <meta http-equiv="refresh" content="2" />
+      <script type="text/javascript">
+        function delayedRedirect() {
+          window.location = "<%= "/complete/" + @transaction_id %>"
+        }
+        setTimeout(delayedRedirect, 2000)
+      </script>
     <% end %>
   </head>
 
