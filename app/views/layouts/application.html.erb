@@ -13,9 +13,12 @@
     <meta name="googlebot-news" content="nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link href="../custom.css" rel="stylesheet">
+
+    <% if params[:controller] == 'loading' %>
+      <meta http-equiv="refresh" content="2" />
+    <% end %>
   </head>
 
-  <body class="text-center">
-    <%= yield %>
-  </body>
+  <%= yield %>
+
 </html>

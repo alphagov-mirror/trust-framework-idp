@@ -1,3 +1,4 @@
+broker: https://stub-oidc-broker-1.cloudapps.digital
 title: IDP 1
 authentication_title: IDP 1
 sign_in: Sign in to your existing IDP 1 account

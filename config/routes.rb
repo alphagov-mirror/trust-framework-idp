@@ -8,4 +8,6 @@ Rails.application.routes.draw do
   get '/consent', to: 'consent#index'
 
   get '/approve', to: 'loading#index'
+
+  get '/complete/:transaction_id', to: 'loading#complete', as: 'complete'
 end

@@ -1,29 +1,31 @@
-<div class="form-signin">
-  <h1 class="h1 mb-3" hidden><%= IDP['authentication_title'] %></h1>
+<body class="text-center">
+  <div class="form-signin">
+    <h1 class="h1 mb-3" hidden><%= IDP['authentication_title'] %></h1>
 
-  <div>
-    <h2 class="h2 mb-3"><%= IDP['sign_in'] %></h2>
+    <div>
+      <h2 class="h2 mb-3"><%= IDP['sign_in'] %></h2>
 
-    <label for="email" class="sr-only">Email address</label>
-    <input type="email" id="email" class="form-control mb-3" placeholder="Email address" required autofocus>
+      <label for="email" class="sr-only">Email address</label>
+      <input type="email" id="email" class="form-control mb-3" placeholder="Email address" required autofocus>
 
-    <label for="password" class="sr-only">Password</label>
-    <input type="password" id="password" class="form-control" placeholder="Password" required>
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" id="password" class="form-control" placeholder="Password" required>
 
-    <div class="checkbox mb-3">
-      <label>
-        <input type="checkbox" value="remember-me"> Remember me
-      </label>
+      <div class="checkbox mb-3">
+        <label>
+          <input type="checkbox" value="remember-me"> Remember me
+        </label>
+      </div>
+
+      <%= link_to "Continue",
+          { controller: "mfa", action: "index", transaction_id: @transaction_id },
+          { class: "btn btn-lg btn-primary btn-block" } %>
     </div>
 
-    <%= link_to "Continue",
-        { controller: "mfa", action: "index", transaction_id: @transaction_id },
-        { class: "btn btn-lg btn-primary btn-block" } %>
-  </div>
+    <div class="mt-5">
+      <h2 class="h2 mb-3"><%= IDP['sign_up'] %></h2>
 
-  <div class="mt-5">
-    <h2 class="h2 mb-3"><%= IDP['sign_up'] %></h2>
-
-    <a class="btn btn-lg btn-primary btn-block" href="#">Create</a>
+      <a class="btn btn-lg btn-primary btn-block" href="#">Create</a>
+    </div>
   </div>
-</div>
+</body>
