@@ -13,11 +13,7 @@ class CredentialsController < ApplicationController
     # Access token is not used currently but will be in the future
     access_token = params[:access_token]
     jwt_credential = build_jwt(credential_payload)
-    render json: {
-      transaction_id: params[:transaction_id],
-      jws: encode(jwt_credential),
-      public_key: rsa_public.to_s
-    }
+    render json: { jws: encode(jwt_credential), public_key: rsa_public.to_s }
   rescue NoMethodError
     render json: { error: "Unknown type: #{type}" }, status: :bad_request
   rescue TypeError
