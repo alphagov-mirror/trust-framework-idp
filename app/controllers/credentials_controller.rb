@@ -16,7 +16,7 @@ class CredentialsController < ApplicationController
     render json: {
       transaction_id: params[:transaction_id],
       jws: encode(jwt_credential),
-      dummy_key: rsa_public.to_s
+      public_key: rsa_public.to_s
     }
   rescue NoMethodError
     render json: { error: "Unknown type: #{type}" }, status: :bad_request
