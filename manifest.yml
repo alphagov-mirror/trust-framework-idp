@@ -14,3 +14,4 @@
       RAILS_ENV: production
       IDP: idp2
       BROKER_DOMAIN: https://stub-oidc-broker-2.cloudapps.digital
+      DIRECTORY_DOMAIN: https://directory-prototype.cloudapps.digital
