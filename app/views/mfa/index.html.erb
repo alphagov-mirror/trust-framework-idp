@@ -9,7 +9,7 @@
       <input type="email" id="email" class="form-control mb-3" required autofocus>
 
       <%= link_to "Continue",
-          { controller: "consent", action: "index", transaction_id: @transaction_id },
+          { controller: "consent", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
           { class: "btn btn-lg btn-primary btn-block mt-5" } %>
     </div>
   </div>

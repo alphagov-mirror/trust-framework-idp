@@ -18,7 +18,7 @@
       </div>
 
       <%= link_to "Continue",
-          { controller: "mfa", action: "index", transaction_id: @transaction_id },
+          { controller: "mfa", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path},
           { class: "btn btn-lg btn-primary btn-block" } %>
     </div>
 

@@ -16,7 +16,7 @@
       <p class="mb-5"><a href="#">Where did this data come from?</a></p>
 
       <%= link_to "Approve",
-          { controller: "loading", action: "index", transaction_id: @transaction_id },
+          { controller: "loading", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
           { class: "btn btn-lg btn-primary btn-block" } %>
 
       <a href="#" class="btn btn-lg btn-secondary btn-block">Cancel</a>
