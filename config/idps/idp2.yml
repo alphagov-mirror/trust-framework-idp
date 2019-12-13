@@ -1,6 +1,4 @@
 idp_name: IDP-2
 title: IDP 2
-authentication_title: IDP 2
-sign_in: Sign in to your existing IDP 2 account
-sign_up: Create your IDP 2 account
-consent: This data will only be used to prove your identity and to do checks against the criminal record database
+sign_in: MasterCard ID Check
+sign_up: New to MasterCard ID Check?
