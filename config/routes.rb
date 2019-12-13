@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get '/authentication', to: 'authentication#index'
 
+  get '/password', to: 'authentication#password'
+
   get '/mfa', to: 'mfa#index'
 
   get '/consent', to: 'consent#index'

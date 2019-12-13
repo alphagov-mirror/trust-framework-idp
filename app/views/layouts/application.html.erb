@@ -25,6 +25,18 @@
     <% end %>
   </head>
 
-  <%= yield %>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="row justify-content-md-center">
+          <p><img src="/images/<%= ENV['IDP'] %>.png" width="160px" height="100px" alt="IDP logo"></p>
+          <span style="padding-left: 200px;"></span>
+          <p><img src="/images/Trustmark.svg" class="pt-4 mt-1" alt="Trustmark" /></p>
+        </div>
+      </div>
+    </header>
 
+      <%= yield %>
+
+  </body>
 </html>

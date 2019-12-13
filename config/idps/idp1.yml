@@ -1,6 +1,4 @@
 idp_name: IDP-1
 title: IDP 1
-authentication_title: IDP 1
-sign_in: Sign in to your existing IDP 1 account
-sign_up: Create your IDP 1 account
+sign_in: Sign in to a Post Office ID
 consent: This data will only be used to prove your identity and to do checks against the criminal record database

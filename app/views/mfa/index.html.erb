@@ -1,16 +1,22 @@
-<body class="text-center">
-  <div class="form-signin">
-    <h1 class="h1 mb-3" hidden><%= IDP['authentication_title'] %></h1>
+<div class="form-signin text-center">
+  <h1 class="h1 mb-3" hidden><%= IDP['title'] %></h1>
 
-    <div>
-      <h2 class="h2 mb-3">Enter the security code we sent you</h2>
+  <div class="text-left">
+    <h2 class="h2 mb-4">Sign in with SMS</h2>
 
-      <label for="email" class="sr-only">Email address</label>
-      <input type="email" id="email" class="form-control mb-3" required autofocus>
+    <p>
+      A code has been sent to your mobile phone.
+      <br/>
+      Please fill in the code below to log in.
+    </p>
 
-      <%= link_to "Continue",
-          { controller: "consent", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
-          { class: "btn btn-lg btn-primary btn-block mt-5" } %>
-    </div>
+    <label for="mfa" class="font-weight-bold">Enter the code sent to your mobile phone</label>
+    <input type="mfa" id="mfa" class="form-control mb-4" placeholder="Code" required autofocus>
+
+    <%= link_to "Continue",
+        { controller: "consent", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
+        { class: "btn btn-lg btn-danger btn-block" } %>
   </div>
-</body>
+
+  <p class="mt-4"><a href="#" class="text-danger">I didn't get my code</a></p>
+</div>

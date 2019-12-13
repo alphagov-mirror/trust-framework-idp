@@ -1,25 +1,27 @@
-<body class="text-center">
-  <div class="form-signin">
-    <h1 class="h1 mb-3" hidden><%= IDP['authentication_title'] %></h1>
+<div class="form-signin text-center">
+  <h1 class="h1 mb-3" hidden><%= IDP['title'] %></h1>
 
-    <div>
-      <h2 class="h2 mb-3">A service is requesting some of your information</h2>
+  <div class="text-left">
+    <h2 class="h2 mb-4">Share information</h2>
 
-      <p class="h6 mb-5"><%= IDP['consent'] %></p>
+    <p>
+      This data will only be used to create or match you to an account.
+    </p>
 
-      <ul class="list-group mb-5">
-        <li class="list-group-item">Full Name</li>
-        <li class="list-group-item">Date of birth</li>
-        <li class="list-group-item">Address</li>
+    <div class="consent-list">
+      <ul class="list-group mb-3">
+        <li class="list-group-item border-top-0 border-right-0 border-left-0">Full Name</li>
+        <li class="list-group-item border-top-0 border-right-0 border-left-0">Date of birth</li>
+        <li class="list-group-item border-0">Address</li>
       </ul>
-
-      <p class="mb-5"><a href="#">Where did this data come from?</a></p>
-
-      <%= link_to "Approve",
-          { controller: "loading", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
-          { class: "btn btn-lg btn-primary btn-block" } %>
-
-      <a href="#" class="btn btn-lg btn-secondary btn-block">Cancel</a>
     </div>
   </div>
-</body>
+
+  <p class="mt-3 mb-5"><a href="#" class="text-danger">Where did this data come from?</a></p>
+
+  <%= link_to "Approve",
+      { controller: "loading", action: "index", transaction_id: @transaction_id, redirect_path: @redirect_path },
+      { class: "btn btn-lg btn-danger btn-block" } %>
+  <a href="#" class="btn btn-lg btn-secondary btn-block">Cancel</a>
+</div>
+
