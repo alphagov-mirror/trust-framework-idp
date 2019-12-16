@@ -7,9 +7,15 @@
     <label for="email" class="font-weight-bold">Email address or username</label>
     <input type="email" id="email" class="form-control mb-4" placeholder="Email address" required autofocus>
 
-    <%= link_to "Continue",
-        { controller: "authentication", action: "password", transaction_id: @transaction_id, redirect_path: @redirect_path},
-        { class: "btn btn-lg btn-danger btn-block" } %>
+    <% if ENV['IDP'] == 'idp1' %>
+      <%= link_to "Continue",
+          { controller: "authentication", action: "password", transaction_id: @transaction_id, redirect_path: @redirect_path},
+          { class: "btn btn-lg btn-danger btn-block" } %>
+    <% else %>
+      <%= link_to "Continue",
+          { controller: "authentication", action: "password", transaction_id: @transaction_id, redirect_path: @redirect_path},
+          { class: "btn btn-lg btn-warning btn-block" } %>
+    <% end %>
   </div>
 
   <p class="mt-4"><a href="#" class="text-danger">I forgot my username</a></p>
