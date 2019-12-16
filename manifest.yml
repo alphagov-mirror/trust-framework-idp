@@ -7,6 +7,7 @@
       RAILS_ENV: production
       IDP: idp1
       BROKER_DOMAIN: https://stub-oidc-broker-1.cloudapps.digital
+      DIRECTORY_DOMAIN: https://directory-prototype.cloudapps.digital
   - name: trust-framework-idp-2
     buildpack: https://github.com/cloudfoundry/ruby-buildpack.git
     command: bundle exec rails db:migrate && bundle exec rails assets:precompile && bundle exec rails s
