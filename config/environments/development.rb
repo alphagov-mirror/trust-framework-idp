@@ -60,5 +60,5 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.broker_domain = 'localhost:6610'
+  config.broker_domain = 'http://localhost:6610'
 end
