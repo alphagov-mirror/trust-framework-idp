@@ -17,11 +17,11 @@ class VerifiableCredential
         "type": "Person",
         "address": {
           "type": "PostalAddress",
-          "streetAddress": "123 Main St.",
-          "addressLocality": "Blacksburg",
-          "addressRegion": "VA",
-          "postalCode": "24060",
-          "addressCountry": "US"
+          "street": "St. Paul's Churchyard",
+          "town": "City of London",
+          "county": "Greater London",
+          "postCode": "EC4M 8AD",
+          "country": "UK"
         }
       }
     }
@@ -53,11 +53,11 @@ private
         "@context": {
           "@version": 1.1,
           "@protected": true,
-          "streetAddress": "http://schema.org/streetAddress",
-          "addressLocality": "http://schema.org/addressLocality",
-          "addressRegion": "http://schema.org/addressRegion",
-          "postalCode": "http://schema.org/postalCode",
-          "addressCountry": "http://schema.org/addressCountry"
+          "street": "http://schema.org/streetAddress",
+          "town": "http://schema.org/addressLocality",
+          "county": "http://schema.org/addressRegion",
+          "postCode": "http://schema.org/postalCode",
+          "country": "http://schema.org/addressCountry"
         }
       }
     }
