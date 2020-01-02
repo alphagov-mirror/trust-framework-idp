@@ -10,4 +10,4 @@ bundle check || bundle install
 
 yarn check || yarn install
 
-bin/rails s --pid `pwd`/tmp/pids/idp-2.pid
+bin/rails s -d --pid `pwd`/tmp/pids/idp2.pid
